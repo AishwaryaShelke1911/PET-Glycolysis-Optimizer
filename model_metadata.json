@@ -1,0 +1,50 @@
+{
+  "best_model": "GradientBoosting",
+  "cv_results": {
+    "LinearRegression": {
+      "r2_mean": -0.1565383126990521,
+      "r2_std": 0.5946759230106445,
+      "rmse_mean": 24.47726048534046,
+      "rmse_std": 6.795409704443011,
+      "mae_mean": 18.573430976725014,
+      "mae_std": 4.3888739886058135
+    },
+    "RandomForest": {
+      "r2_mean": 0.260412330690386,
+      "r2_std": 0.0933784543574993,
+      "rmse_mean": 20.200288435436754,
+      "rmse_std": 4.155716874880903,
+      "mae_mean": 16.301078270935733,
+      "mae_std": 2.75553467113698
+    },
+    "GradientBoosting": {
+      "r2_mean": 0.31588177492851416,
+      "r2_std": 0.1357880522558345,
+      "rmse_mean": 19.42745619173267,
+      "rmse_std": 4.548793015465903,
+      "mae_mean": 14.923419173964628,
+      "mae_std": 2.6031226926208153
+    },
+    "XGBoost": {
+      "r2_mean": 0.17606516127503447,
+      "r2_std": 0.3017461786338631,
+      "rmse_mean": 20.925694774678778,
+      "rmse_std": 4.96812373350104,
+      "mae_mean": 15.731811272757394,
+      "mae_std": 3.1816805454615373
+    }
+  },
+  "n_folds": 5,
+  "features": [
+    "Catalyst_Dosage_wt%",
+    "Temp_C",
+    "Time_min",
+    "EG_PET_Ratio",
+    "Ea_kJ_per_mol",
+    "Arrhenius_log_k",
+    "Catalyst_encoded"
+  ],
+  "n_rows_total": 71,
+  "uncertainty_calibration_factor": 1.3781601188272619,
+  "notes": "Metrics are 5-fold cross-validated mean+/-std, not a single train/test split, due to small literature-mined sample size. Includes physics-informed Arrhenius activation-energy features derived from literature kinetic data where available."
+}
